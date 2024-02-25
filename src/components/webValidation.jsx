@@ -54,11 +54,12 @@ const WebValidation = () => {
 
   return (
     <div className="flex flex-col justify-center items-center bg-green-300 min-h-screen">
-      <h1 className="text-3xl font-bold">Face verification</h1>
-      <div className="flex justify-center items-center">
+      <h1 className="text-6xl font-bold mb-4">Face verification</h1>
+      <div className="flex justify-center items-center border-2 border-black rounded-md ">
         <video crossOrigin="anonymous" ref={videoRef} autoPlay></video>
       </div>
       <canvas ref={canvasRef} width="940" height="650" className="appcanvas" />
+      <h2 className="text-3xl font-bold mt-5">Verifying please wait......</h2>
     </div>
   );
 };
