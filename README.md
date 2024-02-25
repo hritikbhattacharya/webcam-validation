@@ -2,6 +2,16 @@
 
 This project is a simple login system that uses webcam validation for user authentication. It's built with React and uses the `face-api.js` library for face detection.
 
+## Features
+
+<ol>
+  
+
+<li>User can enter their email and password.</li>
+<li>If the email and password fields are not empty, the user can click on the "Verify" link.</li>
+<li>The "Verify" link redirects the user to a webcam validation page.</li>
+<li>The webcam validation page uses the face-api.js library to detect the user's face.</li>
+</ol>
 ## Installation
 
 To install the project, follow these steps:
@@ -28,9 +38,4 @@ npm start
 The application will start on http://localhost:3000.
 
 
-## Features
 
--User can enter their email and password.
--If the email and password fields are not empty, the user can click on the "Verify" link.
--The "Verify" link redirects the user to a webcam validation page.
--The webcam validation page uses the face-api.js library to detect the user's face.
