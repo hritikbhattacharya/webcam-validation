@@ -1,8 +1,9 @@
 import React from "react";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as faceapi from "face-api.js";
 
 const WebValidation = () => {
+  const [isVerified, setIsVerified] = useState(false);
   const videoRef = useRef();
   const canvasRef = useRef();
 
@@ -40,6 +41,7 @@ const WebValidation = () => {
         .withFaceExpressions();
 
       if (detections.length > 0) {
+        setIsVerified(true);
         window.location.href = "/home";
       }
       canvasRef.current.innerHtml = faceapi.createCanvasFromMedia(
@@ -59,7 +61,11 @@ const WebValidation = () => {
         <video crossOrigin="anonymous" ref={videoRef} autoPlay></video>
       </div>
       <canvas ref={canvasRef} width="940" height="650" className="appcanvas" />
-      <h2 className="text-3xl font-bold mt-5">Verifying please wait......</h2>
+      {isVerified ? (
+        <h2 className="text-3xl font-bold mt-5">Face Verified</h2>
+      ) : (
+        <h2 className="text-3xl font-bold mt-5">Verifying please wait......</h2>
+      )}
     </div>
   );
 };

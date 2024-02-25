@@ -19,8 +19,7 @@ function Login() {
       <div className="flex flex-col justify-center items-center border-2 border-black rounded-md bg-red-300 p-7">
         <h1 className="text-black text-4xl mb-3 font-bold">LOGIN</h1>
         <label className="text-1xl " htmlFor="email">
-          {" "}
-          Enter Email{" "}
+          Enter Email
         </label>
         <input
           className="border-2 border-black rounded-md my-2 p-2"
